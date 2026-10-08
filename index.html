@@ -1,721 +1,1577 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Política de Privacidad de ZonaCheck</title>
-  <style>
-    @page {
-      size: A4;
-      margin: 18mm 16mm 18mm 16mm;
-      @bottom-right {
-        content: "Página " counter(page) " de " counter(pages);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        font-size: 8pt;
-        color: #64748B;
-      }
-      @bottom-left {
-        content: "ZonaCheck · Política de Privacidad (v3.0 Actualizada)";
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        font-size: 8pt;
-        color: #64748B;
-      }
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #0F172A;
-      background-color: #FFFFFF;
-      font-size: 9.5pt;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-      padding: 0;
-    }
-    /* HEADER */
-    .header-card {
-      border: 1px solid #CBD5E1;
-      border-radius: 12px;
-      padding: 16px 20px;
-      background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
-      margin-bottom: 18px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-    .badge-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .badge-official {
-      background-color: #ECFDF5;
-      color: #059669;
-      border: 1px solid #A7F3D0;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 7.5pt;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-    .badge-version {
-      background-color: #E2E8F0;
-      color: #475569;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 8pt;
-      font-weight: 600;
-    }
-    .main-title {
-      font-size: 17pt;
-      font-weight: 900;
-      color: #0F172A;
-      letter-spacing: -0.3px;
-      margin-bottom: 10px;
-    }
-    .ambito-box {
-      background-color: #ECFDF5;
-      border: 1px solid #A7F3D0;
-      border-radius: 8px;
-      padding: 9px 12px;
-      font-size: 8.5pt;
-      color: #065F46;
-      font-weight: 500;
-      line-height: 1.45;
-    }
-    /* SECTION CARD */
-    .section-card {
-      border: 1px solid #E2E8F0;
-      border-radius: 10px;
-      margin-bottom: 14px;
-      background-color: #FFFFFF;
-      overflow: hidden;
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-    .section-header {
-      background-color: #F8FAFC;
-      border-bottom: 1px solid #E2E8F0;
-      padding: 9px 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .section-number {
-      background-color: #059669;
-      color: #FFFFFF;
-      width: 22px;
-      height: 22px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 8.5pt;
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-    .section-title {
-      font-size: 10.5pt;
-      font-weight: 800;
-      color: #0F172A;
-    }
-    .section-body {
-      padding: 12px 14px;
-    }
-    p {
-      margin-bottom: 8px;
-      text-align: justify;
-    }
-    p:last-child {
-      margin-bottom: 0;
-    }
-    .subheading {
-      font-size: 9pt;
-      font-weight: 700;
-      color: #1E293B;
-      margin-top: 6px;
-      margin-bottom: 6px;
-    }
-    /* BULLETS */
-    .bullet-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 7px;
-      font-size: 9pt;
-      line-height: 1.45;
-    }
-    .bullet-item:last-child {
-      margin-bottom: 0;
-    }
-    .bullet-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: #059669;
-      margin-top: 6px;
-      margin-right: 8px;
-      flex-shrink: 0;
-    }
-    .bullet-content {
-      flex: 1;
-      text-align: justify;
-    }
-    .bullet-title {
-      font-weight: 700;
-      color: #0F172A;
-    }
-    /* TABLES */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 8px;
-      margin-bottom: 6px;
-      font-size: 8.5pt;
-      border: 1px solid #CBD5E1;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    th {
-      background-color: #F1F5F9;
-      color: #0F172A;
-      font-weight: 800;
-      text-align: left;
-      padding: 7px 10px;
-      border-bottom: 1px solid #CBD5E1;
-      border-right: 1px solid #CBD5E1;
-    }
-    th:last-child {
-      border-right: none;
-    }
-    td {
-      padding: 7px 10px;
-      border-bottom: 1px solid #E2E8F0;
-      border-right: 1px solid #E2E8F0;
-      vertical-align: top;
-      line-height: 1.4;
-    }
-    td:last-child {
-      border-right: none;
-    }
-    tr:last-child td {
-      border-bottom: none;
-    }
-    tr:nth-child(even) td {
-      background-color: #F8FAFC;
-    }
-    .td-bold {
-      font-weight: 700;
-      color: #0F172A;
-    }
-    /* ANNEX */
-    .annex-card {
-      border: 1px solid #BFDBFE;
-      border-radius: 10px;
-      margin-bottom: 14px;
-      background-color: #FFFFFF;
-      overflow: hidden;
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-    .annex-header {
-      background-color: #EFF6FF;
-      border-bottom: 1px solid #BFDBFE;
-      padding: 9px 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .annex-badge {
-      background-color: #2563EB;
-      color: #FFFFFF;
-      padding: 2px 7px;
-      border-radius: 5px;
-      font-size: 7.5pt;
-      font-weight: 900;
-    }
-    .annex-title {
-      font-size: 10pt;
-      font-weight: 800;
-      color: #1E3A8A;
-      text-transform: uppercase;
-    }
-    .notice-box {
-      background-color: #F8FAFC;
-      border: 1px solid #CBD5E1;
-      border-radius: 6px;
-      padding: 8px 12px;
-      font-size: 8pt;
-      font-style: italic;
-      color: #475569;
-      line-height: 1.4;
-      margin-top: 8px;
-    }
-    /* LINKS */
-    a {
-      color: #2563EB;
-      text-decoration: none;
-      word-break: break-all;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .link-list {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-top: 4px;
-    }
-    .link-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 8.5pt;
-    }
-    .link-name {
-      font-weight: 700;
-      color: #0F172A;
-    }
-    .footer-doc {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 8pt;
-      color: #64748B;
-      border-top: 1px solid #E2E8F0;
-      padding-top: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Política de Privacidad de ZonaCheck. Versión 3.0, octubre de 2026.">
+<meta name="theme-color" content="#16845b">
+
+<title>Política de Privacidad · ZonaCheck</title>
+
+<style>
+:root {
+    --green: #16845b;
+    --green-dark: #0f6948;
+    --green-soft: #eaf7f1;
+    --green-border: #cdebdc;
+    --text: #1c2924;
+    --muted: #66736e;
+    --light: #f5f8f6;
+    --border: #e2e9e5;
+    --white: #ffffff;
+    --shadow: 0 8px 30px rgba(20, 50, 38, .07);
+    --radius: 18px;
+    --max-width: 980px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f5f7f6;
+    color: var(--text);
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: var(--green-dark);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER */
+
+.header {
+    background:
+        linear-gradient(135deg, #0f6948 0%, #16845b 55%, #1b9367 100%);
+    color: white;
+    padding: 58px 20px 54px;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 750;
+    letter-spacing: -.3px;
+}
+
+.header h1 {
+    margin: 0 0 13px;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -1.4px;
+}
+
+.header-subtitle {
+    max-width: 760px;
+    margin: 0;
+    font-size: 17px;
+    color: rgba(255,255,255,.88);
+}
+
+.version {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 24px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    font-size: 13px;
+    color: rgba(255,255,255,.92);
+}
+
+/* CONTENT */
+
+.container {
+    max-width: var(--max-width);
+    margin: -24px auto 70px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.intro {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 30px;
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+}
+
+.intro-label {
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.intro p {
+    margin: 0;
+    color: #4d5a55;
+}
+
+/* HIGHLIGHTS */
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 18px;
+}
+
+.highlight-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--green-soft);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin-bottom: 11px;
+}
+
+.highlight strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.highlight span {
+    display: block;
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+/* SECTIONS */
+
+.section {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 34px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 18px rgba(20,50,38,.025);
+    scroll-margin-top: 25px;
+}
+
+.section-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.section-number {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: var(--green-soft);
+    color: var(--green-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -.4px;
+}
+
+.section p {
+    margin: 0 0 15px;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+.section ul {
+    margin: 12px 0 18px;
+    padding-left: 22px;
+}
+
+.section li {
+    margin-bottom: 9px;
+}
+
+.lead {
+    font-size: 16px;
+    color: #33433d;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* DATA CARDS */
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.data-card {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 17px;
+}
+
+.data-card strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.data-card p {
+    font-size: 13.5px;
+    color: #58655f;
+    margin: 0;
+}
+
+/* CALLOUT */
+
+.callout {
+    margin: 20px 0;
+    padding: 17px 19px;
+    border-radius: 14px;
+    background: var(--green-soft);
+    border: 1px solid var(--green-border);
+}
+
+.callout strong {
+    color: var(--green-dark);
+}
+
+.callout p {
+    margin-top: 5px;
+    color: #3d5c4e;
+}
+
+/* TABLES */
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 13.5px;
+}
+
+th {
+    background: #f1f6f3;
+    color: #34453e;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .035em;
+    font-weight: 800;
+}
+
+th,
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+td {
+    color: #4c5a54;
+}
+
+/* SOURCE LINKS */
+
+.sources {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.source {
+    display: block;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 14px 16px;
+    transition: .15s ease;
+}
+
+.source:hover {
+    border-color: var(--green-border);
+    background: var(--green-soft);
+    text-decoration: none;
+}
+
+.source-title {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.source-url {
+    display: block;
+    margin-top: 3px;
+    font-size: 11.5px;
+    color: var(--muted);
+}
+
+/* ANNEX */
+
+.annex {
+    border: 1px solid var(--green-border);
+    background: linear-gradient(180deg, #f8fcfa 0%, #ffffff 100%);
+}
+
+.annex .section-number {
+    background: var(--green);
+    color: white;
+}
+
+.important {
+    padding: 18px 20px;
+    border-left: 4px solid var(--green);
+    background: #f6faf8;
+    border-radius: 0 12px 12px 0;
+    margin-top: 22px;
+    color: #42534c;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    color: #78837e;
+    font-size: 12px;
+    padding: 10px 20px 45px;
+}
+
+.footer strong {
+    color: #56625d;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 820px) {
+    .highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .data-grid,
+    .sources {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .header {
+        padding: 42px 18px 42px;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .header-subtitle {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 13px;
+        margin-top: -17px;
+    }
+
+    .intro,
+    .section {
+        padding: 23px 20px;
+        border-radius: 15px;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .highlight {
+        padding: 14px;
+    }
+
+    .section-title {
+        font-size: 19px;
+    }
+
+    .section-head {
+        gap: 11px;
+    }
+
+    .section-number {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
+</style>
 </head>
+
 <body>
-  <!-- CABECERA -->
-  <div class="header-card">
-    <div class="badge-row">
-      <span class="badge-official">Documento Oficial</span>
-      <span class="badge-version">Versión 3.0 · Actualizada (Octubre 2026)</span>
-    </div>
-    <h1 class="main-title">POLÍTICA DE PRIVACIDAD DE ZONACHECK</h1>
-    <div class="ambito-box">
-      <strong>Ámbito:</strong> Aplicación móvil ZonaCheck para Android y multiplataforma. Esta política está redactada para la configuración técnica real de la aplicación y describe de forma transparente los tratamientos efectuados conforme al RGPD y la LOPDGDD.
-    </div>
-  </div>
-  <!-- SECCIÓN 1 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">1</div>
-      <div class="section-title">Qué es ZonaCheck y qué datos puede tratar</div>
-    </div>
-    <div class="section-body">
-      <p>ZonaCheck es una aplicación que permite consultar y comparar información pública y oficial sobre seguridad, población, vivienda y servicios de territorios de España. La aplicación no exige crear una cuenta, no dispone de registro de usuario ni inicio de sesión, y no utiliza perfiles personales para consultar los datos territoriales. La recogida de datos personales es sumamente limitada.</p>
-      <div class="subheading">Datos que pueden tratarse según la función utilizada:</div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Datos técnicos de la aplicación:</span> identificadores de instalación anónimos generados por Firebase SDK (App Instance ID), información técnica del dispositivo, sistema operativo, versión de la aplicación y datos de red necesarios para el funcionamiento y estabilidad de los servicios integrados.</div>
-      </div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Datos de uso y analítica anónima:</span> eventos de interacción técnica con la aplicación (pantallas consultadas, territorios visualizados, indicadores seleccionados, búsquedas y comparaciones realizadas) registrados de manera agregada mediante Firebase Analytics para analizar el uso general y optimizar la estabilidad técnica.</div>
-      </div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Publicidad (Inexistente):</span> la aplicación no contiene publicidad activa ni bibliotecas publicitarias integradas (como Google AdMob), por lo que no se solicitan anuncios ni se recogen identificadores publicitarios para perfilado comercial.</div>
-      </div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Dirección IP:</span> puede ser procesada técnicamente por la infraestructura de red (como Google al descargar fuentes oficiales o registrar telemetría) como parte estándar de la conexión a Internet. Para usuarios de la UE/EEE, Google Analytics descarta la dirección IP individual tras derivar información geográfica aproximada (país o región) antes de almacenarla.</div>
-      </div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Correo electrónico de soporte voluntario:</span> únicamente si la persona usuaria decide escribir directamente a la dirección de soporte (<a href="mailto:litterafilo@gmail.com">litterafilo@gmail.com</a>), se tratará su dirección de correo y el contenido del mensaje con el fin exclusivo de resolver su consulta.</div>
-      </div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Notificaciones a usuarios (Inexistentes):</span> actualmente ZonaCheck NO envía notificaciones a los usuarios (ni push ni locales) ni dispone de Firebase Cloud Messaging activo. No se recogen ni tratan datos o tokens para el envío de notificaciones.</div>
-      </div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Donaciones y pagos (Inexistentes):</span> actualmente ZonaCheck NO procesa pagos, suscripciones ni donaciones. La aplicación es totalmente gratuita. No se solicitan ni tratan datos bancarios ni números de tarjeta.</div>
-      </div>
-      <div class="bullet-item">
-        <div class="bullet-dot"></div>
-        <div class="bullet-content"><span class="bullet-title">Favoritos y preferencias almacenados localmente:</span> el modo de visualización (claro u oscuro), el idioma seleccionado y los códigos de territorios marcados como favoritos se almacenan exclusivamente en el almacenamiento local del dispositivo mediante SharedPreferences. No se transmiten ni sincronizan con servidores de ZonaCheck ni se usan para crear perfiles.</div>
-      </div>
-    </div>
-  </div>
-  <!-- SECCIÓN 2 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">2</div>
-      <div class="section-title">Datos que ZonaCheck no solicita</div>
-    </div>
-    <div class="section-body">
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">No se solicita ni utiliza la ubicación GPS del dispositivo.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">No se solicita acceso a cámara, micrófono, contactos ni fotografías.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">No se exige registro de usuario, ni cuentas, ni contraseñas, ni inicio de sesión con Google o redes sociales.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">No se recogen datos para enviar notificaciones: la aplicación carece de sistema de notificaciones push o locales a usuarios.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">No se procesan donaciones ni pagos: la aplicación es gratuita y no integra pasarelas de cobro ni recopila datos bancarios o de tarjetas.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">No se crea ningún perfil de usuario ni se asocian las consultas locales a identidades personales.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Los datos oficiales estadísticos territoriales consultados no están asociados por ZonaCheck a la identidad de la persona usuaria.</div></div>
-    </div>
-  </div>
-  <!-- SECCIÓN 3 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">3</div>
-      <div class="section-title">Finalidades del tratamiento</div>
-    </div>
-    <div class="section-body">
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Prestar las funciones de ZonaCheck y permitir la consulta, comparación y visualización de información territorial oficial.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Mantener, proteger y mejorar el funcionamiento técnico y estabilidad de la aplicación.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Detectar, prevenir y gestionar usos abusivos, incidentes de seguridad y fallos técnicos.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Obtener estadísticas anónimas de rendimiento y navegación agregada mediante Firebase Analytics.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Gestionar y responder consultas de soporte recibidas voluntariamente por correo electrónico.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Mantener actualizados y consolidados los datos oficiales utilizados por la aplicación.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content">Cumplir obligaciones legales y atender requerimientos de autoridades competentes cuando proceda.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><strong>Aclaración de inexistencia:</strong> en la versión actual no se efectúa tratamiento alguno para el envío de notificaciones a usuarios, gestión de donaciones ni comunicaciones periódicas de suscripción.</div></div>
-    </div>
-  </div>
-  <!-- SECCIÓN 4 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">4</div>
-      <div class="section-title">Bases jurídicas</div>
-    </div>
-    <div class="section-body">
-      <p>Cada tratamiento se apoya en la base jurídica que corresponde a su finalidad. La existencia de una base jurídica para un tratamiento no implica que todos los datos indicados en esta política se recojan en todas las sesiones.</p>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 35%;">Tratamiento</th>
-            <th style="width: 65%;">Base jurídica</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="td-bold">Prestación básica de ZonaCheck</td>
-            <td>Ejecución de la relación solicitada por la persona usuaria, en la medida necesaria para prestar la funcionalidad.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Seguridad técnica y prevención del abuso</td>
-            <td>Interés legítimo del responsable en proteger la aplicación, sus sistemas y a sus usuarios, aplicando las garantías y límites previstos por el RGPD.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Firebase Analytics</td>
-            <td>Interés legítimo en el mantenimiento técnico, rendimiento y estabilidad de la aplicación mediante telemetría agregada anónima, sin elaboración de perfiles personales ni comerciales.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Publicidad</td>
-            <td>Inaplicable: la aplicación no incluye publicidad ni componentes de monetización publicitaria en su versión actual.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Contacto por correo</td>
-            <td>Atención de la solicitud de soporte remitida voluntariamente por la persona interesada.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Newsletter (Inexistente)</td>
-            <td>Inaplicable: ZonaCheck no dispone de servicio de suscripción ni envía comunicaciones comerciales o informativas.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Notificaciones (Inexistentes)</td>
-            <td>Inaplicable: la aplicación no envía notificaciones ni solicita permisos para su recepción.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Donaciones/pagos (Inexistentes)</td>
-            <td>Inaplicable: la aplicación no procesa donaciones ni transacciones de pago.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Obligaciones legales</td>
-            <td>Cumplimiento de una obligación legal aplicable al responsable.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <!-- SECCIÓN 5 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">5</div>
-      <div class="section-title">Firebase y Google Analytics</div>
-    </div>
-    <div class="section-body">
-      <p>ZonaCheck utiliza Firebase como plataforma de servicios técnicos y Google Analytics for Firebase para registrar estadísticas técnicas agregadas sobre el funcionamiento de la aplicación. Firebase procesa datos técnicos necesarios para prestar los servicios de diagnóstico y estabilidad. Google documenta identificadores de instalación de la aplicación (Firebase Installation ID), datos técnicos del dispositivo y, según la infraestructura de red, direcciones IP que en usuarios de la Unión Europea se descartan tras derivar información geográfica aproximada.</p>
-      <p><strong>Eventos registrados en ZonaCheck:</strong> La analítica en ZonaCheck se limita exclusivamente a eventos técnicos agregados de interacción: visualización de pantallas, consulta de fichas territoriales (código, nombre y nivel de territorio), cambio de indicador seleccionado, comparaciones realizadas entre dos territorios, guardado o retirada de favoritos locales y términos de búsqueda introducidos. No se asocian estos eventos a nombres, correos ni datos identificativos personales, no se crean perfiles individuales de usuarios y la telemetría se recopila de forma automatizada con fines de estabilidad técnica y rendimiento.</p>
-      <p>Actualmente NO se encuentra habilitado Firebase Cloud Messaging (FCM) ni ningún sistema de notificaciones a usuarios. Por tanto, ZonaCheck no recopila ni trata tokens de registro ni identificadores de instalación para el envío de notificaciones.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 6 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">6</div>
-      <div class="section-title">Ausencia de publicidad</div>
-    </div>
-    <div class="section-body">
-      <p>ZonaCheck es una aplicación totalmente libre de publicidad en su versión actual. No contiene componentes publicitarios ni bibliotecas de Google AdMob integradas en el binario, no solicita identificadores publicitarios (Android Advertising ID), no emite anuncios personalizados ni no personalizados, y no recopila datos para redes de anuncios o perfilado comercial de ningún tipo.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 7 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">7</div>
-      <div class="section-title">Contacto por correo electrónico</div>
-    </div>
-    <div class="section-body">
-      <p>La persona usuaria puede contactar con ZonaCheck mediante el correo <a href="mailto:litterafilo@gmail.com">litterafilo@gmail.com</a>. Se tratará la dirección de correo, el contenido del mensaje y los datos técnicos que puedan formar parte del servicio de correo. La finalidad es gestionar y responder la consulta.</p>
-      <p>Los mensajes de contacto se conservarán durante un máximo de 2 años, salvo que exista una obligación legal que exija conservarlos durante más tiempo o que resulte necesario conservar determinadas evidencias para formular, ejercer o defender reclamaciones.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 8 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">8</div>
-      <div class="section-title">Comunicaciones informativas / newsletter</div>
-    </div>
-    <div class="section-body">
-      <p>Actualmente ZonaCheck NO dispone de servicio de suscripción ni envía boletines informativos, newsletters ni comunicaciones periódicas. No se recogen ni almacenan direcciones de correo electrónico para listas de distribución. Si en el futuro se implementase alguna modalidad voluntaria de boletín informativo, requerirá la suscripción previa y expresa de la persona interesada con opción inmediata de baja.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 9 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">9</div>
-      <div class="section-title">Notificaciones</div>
-    </div>
-    <div class="section-body">
-      <p>En la situación actual de ZonaCheck NO existen notificaciones a usuarios (ni push ni locales). La aplicación no solicita permisos de notificación ni utiliza servicios de entrega de mensajes (como Firebase Cloud Messaging). Por consiguiente, ZonaCheck no recopila identificadores de dispositivo, tokens ni datos para el envío de notificaciones.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 10 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">10</div>
-      <div class="section-title">Favoritos y preferencias almacenados localmente</div>
-    </div>
-    <div class="section-body">
-      <p>Los favoritos se almacenan exclusivamente en el dispositivo. Pueden contener el identificador y nombre del territorio seleccionado y preferencias necesarias para la experiencia de usuario (modo oscuro, idioma seleccionado y estado de bienvenida). ZonaCheck no utiliza esos datos locales para crear una cuenta o un perfil personal en sus servidores. La eliminación de la aplicación puede provocar la pérdida de estos datos locales.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 11 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">11</div>
-      <div class="section-title">Donaciones y pagos</div>
-    </div>
-    <div class="section-body">
-      <p>Actualmente NO existen donaciones ni se procesa ningún tipo de pago, suscripción o transacción monetaria en ZonaCheck. La aplicación es completamente gratuita en todas sus funciones de consulta y comparación territorial. ZonaCheck no solicita, no recibe, no procesa ni almacena datos bancarios, números de tarjeta ni datos relativos a medios de pago. No existe integración activa con Stripe ni con ninguna pasarela de pago para cobros a usuarios.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 12 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">12</div>
-      <div class="section-title">Datos oficiales, mapas y funcionamiento sin conexión</div>
-    </div>
-    <div class="section-body">
-      <p><strong>Diferencia entre datos estadísticos oficiales y datos personales:</strong> Todos los indicadores mostrados por ZonaCheck (criminalidad del Balance del Ministerio del Interior, padrón del INE, vivienda del MIVAU/SERPAVI y sanidad del Ministerio de Sanidad) proceden exclusivamente de fuentes estadísticas oficiales del Estado español. Se trata de información pública de ámbito territorial agregado, la cual es enteramente distinta e independiente de los datos personales de las personas usuarias de la aplicación. ZonaCheck jamás asocia dichas estadísticas a la identidad de ningún usuario.</p>
-      <p><strong>Cartografía 100% local y funcionamiento sin conexión:</strong> ZonaCheck utiliza cartografía vectorial almacenada localmente en la propia aplicación (assets/maps/world.geojson y polígonos territoriales oficiales del IGN). La cartografía no se descarga de servidores externos de teselas remotas ni rastrea la posición geográfica del usuario, permitiendo un funcionamiento ágil, seguro y 100% privado.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 14 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">14</div>
-      <div class="section-title">Proveedores y destinatarios</div>
-    </div>
-    <div class="section-body">
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 25%;">Proveedor</th>
-            <th style="width: 30%;">Función</th>
-            <th style="width: 45%;">Datos potenciales</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="td-bold">Google / Firebase</td>
-            <td>Infraestructura y Analytics técnico</td>
-            <td>Identificadores de instalación, datos técnicos y eventos agregados de interacción sin datos identificativos directos.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Google / Gmail</td>
-            <td>Correo de soporte</td>
-            <td>Dirección de correo, contenido del mensaje y datos técnicos del servicio de correo cuando el usuario contacta voluntariamente.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <!-- SECCIÓN 15 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">15</div>
-      <div class="section-title">Transferencias internacionales</div>
-    </div>
-    <div class="section-body">
-      <p>Algunos proveedores tecnológicos utilizados por ZonaCheck pueden estar establecidos en Estados Unidos u otros países fuera del Espacio Económico Europeo. Las transferencias internacionales se realizarán mediante un mecanismo válido conforme al RGPD.</p>
-      <p><strong>Google:</strong> Google LLC declara estar certificada bajo el EU-U.S. Data Privacy Framework y los marcos relacionados para los datos procedentes del EEE, Reino Unido y Suiza. Cuando proceda, podrán utilizarse mecanismos contractuales u otras garantías reconocidas por el RGPD.</p>
-      <p><strong>Stripe:</strong> actualmente inactivo al no disponer de donaciones ni cobros en la aplicación.</p>
-      <p>Los mecanismos concretos se aplicarán conforme a la relación contractual y al servicio utilizado. La existencia de una transferencia no modifica los derechos que corresponden a las personas interesadas conforme al RGPD.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 16 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">16</div>
-      <div class="section-title">Plazos de conservación</div>
-    </div>
-    <div class="section-body">
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><span class="bullet-title">Favoritos y preferencias locales:</span> mientras permanezcan almacenados en el dispositivo; su conservación depende de la configuración del dispositivo y de la desinstalación/eliminación de datos de la aplicación.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><span class="bullet-title">Contacto de soporte por correo:</span> máximo general de 2 años tras la resolución de la consulta, salvo obligación legal o necesidad de defensa de reclamaciones.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><span class="bullet-title">Newsletter:</span> inaplicable en la actualidad al no existir listas de suscripción ni envíos informativos periódicos.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><span class="bullet-title">Analytics:</span> conforme a los periodos de conservación configurados en Google Analytics y a las políticas de Google para datos agregados anónimos.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><span class="bullet-title">Publicidad:</span> inaplicable al no contener componentes publicitarios la aplicación.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><span class="bullet-title">Registros técnicos y de seguridad:</span> durante el tiempo estrictamente necesario para seguridad, diagnóstico y cumplimiento técnico.</div></div>
-      <div class="bullet-item"><div class="bullet-dot"></div><div class="bullet-content"><span class="bullet-title">Donaciones y pagos:</span> inaplicable en la actualidad al no procesarse pagos ni transacciones en la aplicación.</div></div>
-    </div>
-  </div>
-  <!-- SECCIÓN 17 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">17</div>
-      <div class="section-title">Derechos de las personas interesadas</div>
-    </div>
-    <div class="section-body">
-      <p>La persona interesada puede ejercer, cuando proceda, los siguientes derechos: acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, así como retirar el consentimiento cuando el tratamiento se base en él.</p>
-      <p>Las solicitudes pueden enviarse a <a href="mailto:litterafilo@gmail.com">litterafilo@gmail.com</a>. La persona deberá aportar la información necesaria para verificar su identidad cuando resulte razonablemente necesario para evitar atender una solicitud de un tercero.</p>
-      <p>El responsable responderá a las solicitudes sin dilación indebida y, en principio, en el plazo de un mes desde su recepción. Este plazo podrá prorrogarse otros dos meses cuando sea necesario por la complejidad o por el número de solicitudes, informando de la prórroga y de sus motivos dentro del primer mes.</p>
-      <p>La retirada del consentimiento no afecta a la licitud del tratamiento realizado antes de su retirada.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 18 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">18</div>
-      <div class="section-title">Derecho a reclamar ante la autoridad de control</div>
-    </div>
-    <div class="section-body">
-      <p>La persona interesada puede presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) si considera que el tratamiento de sus datos personales infringe la normativa aplicable. Información oficial: <a href="https://www.aepd.es/" target="_blank">https://www.aepd.es/</a></p>
-    </div>
-  </div>
-  <!-- SECCIÓN 19 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">19</div>
-      <div class="section-title">Menores de edad</div>
-    </div>
-    <div class="section-body">
-      <p>ZonaCheck no está diseñada para crear cuentas de menores ni para recopilar deliberadamente datos personales de menores. Cuando un tratamiento se base en el consentimiento y la persona sea menor de 14 años, el consentimiento deberá prestarlo quien ejerza la patria potestad o tutela, en los términos establecidos por la legislación española.</p>
-      <p>Para tratamientos que requieran consentimiento publicitario o de analítica, se aplicarán además las opciones de tratamiento para usuarios menores que establezcan Google y la normativa aplicable. La aplicación no utilizará notificaciones para publicidad.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 20 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">20</div>
-      <div class="section-title">Seguridad</div>
-    </div>
-    <div class="section-body">
-      <p>Se aplicarán medidas técnicas y organizativas razonables y adecuadas al riesgo para proteger los datos frente a acceso no autorizado, pérdida, destrucción, alteración, divulgación indebida y otros incidentes. Los proveedores utilizados por ZonaCheck aplicarán sus propias medidas de seguridad conforme a sus términos y políticas.</p>
-      <p>Si se produce una violación de seguridad de los datos personales, el responsable evaluará el incidente y realizará las notificaciones a la autoridad de control y a las personas afectadas cuando exista una obligación legal de hacerlo.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 21 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">21</div>
-      <div class="section-title">Ausencia de cookies web</div>
-    </div>
-    <div class="section-body">
-      <p>ZonaCheck es una aplicación móvil nativa para Android y no utiliza cookies ni tecnologías de seguimiento de páginas web. El almacenamiento técnico se circunscribe a las preferencias locales guardadas en el dispositivo y a la telemetría técnica agregada descrita en esta política.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 22 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">22</div>
-      <div class="section-title">Cambios en la política</div>
-    </div>
-    <div class="section-body">
-      <p>Esta política podrá actualizarse cuando cambien las funciones de ZonaCheck, los proveedores, las finalidades, las bases jurídicas, los tratamientos o la normativa aplicable. Cuando un cambio sea relevante para los derechos o expectativas de las personas usuarias, se comunicará mediante un mecanismo adecuado.</p>
-    </div>
-  </div>
-  <!-- SECCIÓN 23 -->
-  <div class="section-card">
-    <div class="section-header">
-      <div class="section-number">23</div>
-      <div class="section-title">Fuentes oficiales y documentación de terceros</div>
-    </div>
-    <div class="section-body">
-      <div class="link-list">
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Reglamento General de Protección de Datos (RGPD):</span> <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">https://eur-lex.europa.eu/eli/reg/2016/679/oj</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">LOPDGDD — BOE:</span> <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673">https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Agencia Española de Protección de Datos:</span> <a href="https://www.aepd.es/">https://www.aepd.es/</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Firebase — Privacy and Security:</span> <a href="https://firebase.google.com/support/privacy/">https://firebase.google.com/support/privacy/</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Google Analytics — Data safety / Google Play:</span> <a href="https://support.google.com/analytics/answer/11582702">https://support.google.com/analytics/answer/11582702</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Google Analytics — privacidad UE/EEE:</span> <a href="https://support.google.com/analytics/answer/12017362">https://support.google.com/analytics/answer/12017362</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Google — marcos de transferencias internacionales:</span> <a href="https://policies.google.com/privacy/frameworks">https://policies.google.com/privacy/frameworks</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Ministerio del Interior — Balance de Criminalidad:</span> <a href="https://www.interior.gob.es/">https://www.interior.gob.es/</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Instituto Nacional de Estadística (INE):</span> <a href="https://www.ine.es/">https://www.ine.es/</a></div></div>
-        <div class="link-item"><div class="bullet-dot"></div><div><span class="link-name">Ministerio de Vivienda y Agenda Urbana (MIVAU / SERPAVI):</span> <a href="https://www.mivau.gob.es/">https://www.mivau.gob.es/</a></div></div>
-      </div>
-    </div>
-  </div>
-  <!-- ANEXO A -->
-  <div class="annex-card">
-    <div class="annex-header">
-      <span class="annex-badge">ANEXO A</span>
-      <span class="annex-title">Coherencia con Google Play: Seguridad de los Datos</span>
-    </div>
-    <div class="section-body">
-      <p>Este anexo no sustituye el formulario oficial de Google Play. Su finalidad es dejar documentada la correspondencia entre esta política y los productos actualmente seleccionados para ZonaCheck. Google indica que el desarrollador es responsable de completar el formulario de Seguridad de los datos según la recopilación y el intercambio reales de su aplicación.</p>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 25%;">Área</th>
-            <th style="width: 30%;">Tratamiento relevante</th>
-            <th style="width: 45%;">Observación</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="td-bold">Analítica</td>
-            <td>Firebase Analytics</td>
-            <td>Eventos de uso anónimos agregados, sesiones, identificadores técnicos de instalación.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Publicidad</td>
-            <td>Inexistente</td>
-            <td>La aplicación no contiene publicidad ni componentes publicitarios en el binario.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Correo</td>
-            <td>Soporte voluntario</td>
-            <td>Dirección de correo electrónico cuando la persona contacta voluntariamente.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Pagos</td>
-            <td>Inexistentes</td>
-            <td>La aplicación no procesa pagos, suscripciones ni donaciones.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Notificaciones</td>
-            <td>Inexistentes</td>
-            <td>No se envían notificaciones push ni se recopilan tokens de notificación.</td>
-          </tr>
-          <tr>
-            <td class="td-bold">Seguridad</td>
-            <td>Cifrado en tránsito</td>
-            <td>Los datos técnicos transmitidos a servicios de Google viajan mediante conexiones HTTPS/TLS cifradas.</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="notice-box">
-        <strong>Importante:</strong> Las categorías finales de Google Play deben comprobarse contra la implementación de producción, incluyendo los SDK, permisos, eventos personalizados, Analytics y cualquier proveedor que se incorpore posteriormente.
-      </div>
-    </div>
-  </div>
-  <div class="footer-doc">
-    ZonaCheck · Documento confidencial y oficial de Política de Privacidad · Versión 3.0 Actualizada · Todos los derechos reservados
-  </div>
+
+<header class="header">
+    <div class="header-inner">
+
+        <div class="brand">
+            <div class="brand-icon">Z</div>
+            <div class="brand-name">ZonaCheck</div>
+        </div>
+
+        <h1>Política de Privacidad</h1>
+
+        <p class="header-subtitle">
+            Información sobre los tratamientos de datos realizados por la aplicación
+            ZonaCheck y sobre los datos que la aplicación no solicita.
+        </p>
+
+        <div class="version">
+            Versión 3.0 · Actualizada en octubre de 2026
+        </div>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="intro">
+        <div class="intro-label">Ámbito de aplicación</div>
+        <p>
+            Esta política se aplica a la aplicación móvil ZonaCheck para Android
+            y multiplataforma. Está redactada conforme a la configuración técnica
+            real de la aplicación y describe de forma transparente los tratamientos
+            efectuados conforme al RGPD y la LOPDGDD.
+        </p>
+    </div>
+
+    <div class="highlights">
+
+        <div class="highlight">
+            <div class="highlight-icon">✓</div>
+            <strong>Sin cuenta</strong>
+            <span>No requiere registro, contraseña ni inicio de sesión.</span>
+        </div>
+
+        <div class="highlight">
+            <div class="highlight-icon">⌁</div>
+            <strong>Sin GPS</strong>
+            <span>No se solicita ni utiliza la ubicación del dispositivo.</span>
+        </div>
+
+        <div class="highlight">
+            <div class="highlight-icon">A</div>
+            <strong>Sin publicidad</strong>
+            <span>No contiene publicidad ni Google AdMob.</span>
+        </div>
+
+        <div class="highlight">
+            <div class="highlight-icon">€</div>
+            <strong>Sin pagos</strong>
+            <span>No existen pagos, suscripciones ni donaciones.</span>
+        </div>
+
+    </div>
+
+
+    <!-- 1 -->
+
+    <section class="section" id="s1">
+
+        <div class="section-head">
+            <div class="section-number">01</div>
+            <h2 class="section-title">
+                Qué es ZonaCheck y qué datos puede tratar
+            </h2>
+        </div>
+
+        <p class="lead">
+            ZonaCheck es una aplicación que permite consultar y comparar
+            información pública y oficial sobre seguridad, población, vivienda
+            y servicios de territorios de España.
+        </p>
+
+        <p>
+            La aplicación no exige crear una cuenta, no dispone de registro de
+            usuario ni inicio de sesión, y no utiliza perfiles personales para
+            consultar los datos territoriales. La recogida de datos personales
+            es sumamente limitada.
+        </p>
+
+        <p><strong>Datos que pueden tratarse según la función utilizada:</strong></p>
+
+        <div class="data-grid">
+
+            <div class="data-card">
+                <strong>Datos técnicos de la aplicación</strong>
+                <p>
+                    Identificadores de instalación anónimos generados por Firebase
+                    SDK (App Instance ID), información técnica del dispositivo,
+                    sistema operativo, versión de la aplicación y datos de red
+                    necesarios para el funcionamiento y estabilidad de los
+                    servicios integrados.
+                </p>
+            </div>
+
+            <div class="data-card">
+                <strong>Datos de uso y analítica anónima</strong>
+                <p>
+                    Eventos de interacción técnica con la aplicación —pantallas
+                    consultadas, territorios visualizados, indicadores seleccionados,
+                    búsquedas y comparaciones realizadas— registrados de manera
+                    agregada mediante Firebase Analytics.
+                </p>
+            </div>
+
+            <div class="data-card">
+                <strong>Publicidad — inexistente</strong>
+                <p>
+                    La aplicación no contiene publicidad activa ni bibliotecas
+                    publicitarias integradas, como Google AdMob, y no solicita
+                    identificadores publicitarios para perfilado comercial.
+                </p>
+            </div>
+
+            <div class="data-card">
+                <strong>Dirección IP</strong>
+                <p>
+                    Puede ser procesada técnicamente por la infraestructura de red
+                    como parte estándar de la conexión a Internet. Para usuarios
+                    de la UE/EEE, Google Analytics descarta la dirección IP individual
+                    tras derivar información geográfica aproximada antes de almacenarla.
+                </p>
+            </div>
+
+            <div class="data-card">
+                <strong>Correo electrónico de soporte voluntario</strong>
+                <p>
+                    Si la persona usuaria decide escribir a
+                    litterafilo@gmail.com, se tratarán su dirección de correo y
+                    el contenido del mensaje exclusivamente para resolver su consulta.
+                </p>
+            </div>
+
+            <div class="data-card">
+                <strong>Notificaciones — inexistentes</strong>
+                <p>
+                    Actualmente ZonaCheck no envía notificaciones, ni push ni
+                    locales, ni dispone de Firebase Cloud Messaging activo.
+                </p>
+            </div>
+
+            <div class="data-card">
+                <strong>Donaciones y pagos — inexistentes</strong>
+                <p>
+                    ZonaCheck no procesa pagos, suscripciones ni donaciones.
+                    No se solicitan ni tratan datos bancarios ni números de tarjeta.
+                </p>
+            </div>
+
+            <div class="data-card">
+                <strong>Favoritos y preferencias locales</strong>
+                <p>
+                    El modo de visualización, idioma y códigos de territorios
+                    favoritos se almacenan exclusivamente en el dispositivo mediante
+                    SharedPreferences y no se transmiten a servidores de ZonaCheck.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="section" id="s2">
+
+        <div class="section-head">
+            <div class="section-number">02</div>
+            <h2 class="section-title">Datos que ZonaCheck no solicita</h2>
+        </div>
+
+        <ul>
+            <li>No se solicita ni utiliza la ubicación GPS del dispositivo.</li>
+            <li>No se solicita acceso a cámara, micrófono, contactos ni fotografías.</li>
+            <li>No se exige registro de usuario, cuentas, contraseñas ni inicio de sesión con Google o redes sociales.</li>
+            <li>No se recogen datos para enviar notificaciones: la aplicación carece de sistema de notificaciones push o locales a usuarios.</li>
+            <li>No se procesan donaciones ni pagos: la aplicación es gratuita y no integra pasarelas de cobro ni recopila datos bancarios o de tarjetas.</li>
+            <li>No se crea ningún perfil de usuario ni se asocian las consultas locales a identidades personales.</li>
+            <li>Los datos oficiales estadísticos territoriales consultados no están asociados por ZonaCheck a la identidad de la persona usuaria.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="section" id="s3">
+
+        <div class="section-head">
+            <div class="section-number">03</div>
+            <h2 class="section-title">Finalidades del tratamiento</h2>
+        </div>
+
+        <ul>
+            <li>Prestar las funciones de ZonaCheck y permitir la consulta, comparación y visualización de información territorial oficial.</li>
+            <li>Mantener, proteger y mejorar el funcionamiento técnico y estabilidad de la aplicación.</li>
+            <li>Detectar, prevenir y gestionar usos abusivos, incidentes de seguridad y fallos técnicos.</li>
+            <li>Obtener estadísticas anónimas de rendimiento y navegación agregada mediante Firebase Analytics.</li>
+            <li>Gestionar y responder consultas de soporte recibidas voluntariamente por correo electrónico.</li>
+            <li>Mantener actualizados y consolidados los datos oficiales utilizados por la aplicación.</li>
+            <li>Cumplir obligaciones legales y atender requerimientos de autoridades competentes cuando proceda.</li>
+        </ul>
+
+        <div class="callout">
+            <strong>Aclaración de inexistencia</strong>
+            <p>
+                En la versión actual no se efectúa tratamiento alguno para el
+                envío de notificaciones a usuarios, gestión de donaciones ni
+                comunicaciones periódicas de suscripción.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="section" id="s4">
+
+        <div class="section-head">
+            <div class="section-number">04</div>
+            <h2 class="section-title">Bases jurídicas</h2>
+        </div>
+
+        <p>
+            Cada tratamiento se apoya en la base jurídica que corresponde a su
+            finalidad. La existencia de una base jurídica para un tratamiento no
+            implica que todos los datos indicados en esta política se recojan en
+            todas las sesiones.
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tratamiento</th>
+                        <th>Base jurídica</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Prestación básica de ZonaCheck</td>
+                        <td>
+                            Ejecución de la relación solicitada por la persona
+                            usuaria, en la medida necesaria para prestar la
+                            funcionalidad.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Seguridad técnica y prevención del abuso</td>
+                        <td>
+                            Interés legítimo del responsable en proteger la
+                            aplicación, sus sistemas y a sus usuarios, aplicando
+                            las garantías y límites previstos por el RGPD.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Firebase Analytics</td>
+                        <td>
+                            Interés legítimo en el mantenimiento técnico,
+                            rendimiento y estabilidad de la aplicación mediante
+                            telemetría agregada anónima, sin elaboración de
+                            perfiles personales ni comerciales.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Publicidad</td>
+                        <td>
+                            Inaplicable: la aplicación no incluye publicidad ni
+                            componentes de monetización publicitaria en su versión actual.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Contacto por correo</td>
+                        <td>
+                            Atención de la solicitud de soporte remitida
+                            voluntariamente por la persona interesada.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Newsletter</td>
+                        <td>
+                            Inaplicable: ZonaCheck no dispone de servicio de
+                            suscripción ni envía comunicaciones comerciales o informativas.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Notificaciones</td>
+                        <td>
+                            Inaplicable: la aplicación no envía notificaciones
+                            ni solicita permisos para su recepción.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Donaciones/pagos</td>
+                        <td>
+                            Inaplicable: la aplicación no procesa donaciones ni
+                            transacciones de pago.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Obligaciones legales</td>
+                        <td>
+                            Cumplimiento de una obligación legal aplicable al responsable.
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="section" id="s5">
+
+        <div class="section-head">
+            <div class="section-number">05</div>
+            <h2 class="section-title">Firebase y Google Analytics</h2>
+        </div>
+
+        <p>
+            ZonaCheck utiliza Firebase como plataforma de servicios técnicos y
+            Google Analytics for Firebase para registrar estadísticas técnicas
+            agregadas sobre el funcionamiento de la aplicación.
+        </p>
+
+        <p>
+            Firebase procesa datos técnicos necesarios para prestar los servicios
+            de diagnóstico y estabilidad. Google documenta identificadores de
+            instalación de la aplicación (Firebase Installation ID), datos técnicos
+            del dispositivo y, según la infraestructura de red, direcciones IP que
+            en usuarios de la Unión Europea se descartan tras derivar información
+            geográfica aproximada.
+        </p>
+
+        <p>
+            <strong>Eventos registrados en ZonaCheck:</strong> La analítica se
+            limita exclusivamente a eventos técnicos agregados de interacción:
+            visualización de pantallas, consulta de fichas territoriales
+            (código, nombre y nivel de territorio), cambio de indicador seleccionado,
+            comparaciones realizadas entre dos territorios, guardado o retirada
+            de favoritos locales y términos de búsqueda introducidos.
+        </p>
+
+        <p>
+            No se asocian estos eventos a nombres, correos ni datos identificativos
+            personales, no se crean perfiles individuales de usuarios y la
+            telemetría se recopila de forma automatizada con fines de estabilidad
+            técnica y rendimiento.
+        </p>
+
+        <p>
+            Actualmente no se encuentra habilitado Firebase Cloud Messaging (FCM)
+            ni ningún sistema de notificaciones a usuarios. Por tanto, ZonaCheck
+            no recopila ni trata tokens de registro ni identificadores de instalación
+            para el envío de notificaciones.
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="section" id="s6">
+
+        <div class="section-head">
+            <div class="section-number">06</div>
+            <h2 class="section-title">Ausencia de publicidad</h2>
+        </div>
+
+        <p>
+            ZonaCheck es una aplicación totalmente libre de publicidad en su
+            versión actual. No contiene componentes publicitarios ni bibliotecas
+            de Google AdMob integradas en el binario, no solicita identificadores
+            publicitarios (Android Advertising ID), no emite anuncios personalizados
+            ni no personalizados, y no recopila datos para redes de anuncios o
+            perfilado comercial de ningún tipo.
+        </p>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="section" id="s7">
+
+        <div class="section-head">
+            <div class="section-number">07</div>
+            <h2 class="section-title">Contacto por correo electrónico</h2>
+        </div>
+
+        <p>
+            La persona usuaria puede contactar con ZonaCheck mediante el correo
+            <a href="mailto:litterafilo@gmail.com">litterafilo@gmail.com</a>.
+            Se tratará la dirección de correo, el contenido del mensaje y los
+            datos técnicos que puedan formar parte del servicio de correo.
+            La finalidad es gestionar y responder la consulta.
+        </p>
+
+        <p>
+            Los mensajes de contacto se conservarán durante un máximo de 2 años,
+            salvo que exista una obligación legal que exija conservarlos durante
+            más tiempo o que resulte necesario conservar determinadas evidencias
+            para formular, ejercer o defender reclamaciones.
+        </p>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="section" id="s8">
+
+        <div class="section-head">
+            <div class="section-number">08</div>
+            <h2 class="section-title">Comunicaciones informativas / newsletter</h2>
+        </div>
+
+        <p>
+            Actualmente ZonaCheck no dispone de servicio de suscripción ni envía
+            boletines informativos, newsletters ni comunicaciones periódicas.
+            No se recogen ni almacenan direcciones de correo electrónico para
+            listas de distribución.
+        </p>
+
+        <p>
+            Si en el futuro se implementase alguna modalidad voluntaria de boletín
+            informativo, requerirá la suscripción previa y expresa de la persona
+            interesada con opción inmediata de baja.
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="section" id="s9">
+
+        <div class="section-head">
+            <div class="section-number">09</div>
+            <h2 class="section-title">Notificaciones</h2>
+        </div>
+
+        <p>
+            En la situación actual de ZonaCheck no existen notificaciones a
+            usuarios, ni push ni locales. La aplicación no solicita permisos de
+            notificación ni utiliza servicios de entrega de mensajes como Firebase
+            Cloud Messaging.
+        </p>
+
+        <p>
+            Por consiguiente, ZonaCheck no recopila identificadores de dispositivo,
+            tokens ni datos para el envío de notificaciones.
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="section" id="s10">
+
+        <div class="section-head">
+            <div class="section-number">10</div>
+            <h2 class="section-title">Favoritos y preferencias almacenados localmente</h2>
+        </div>
+
+        <p>
+            Los favoritos se almacenan exclusivamente en el dispositivo. Pueden
+            contener el identificador y nombre del territorio seleccionado y
+            preferencias necesarias para la experiencia de usuario (modo oscuro,
+            idioma seleccionado y estado de bienvenida).
+        </p>
+
+        <p>
+            ZonaCheck no utiliza esos datos locales para crear una cuenta o un
+            perfil personal en sus servidores. La eliminación de la aplicación
+            puede provocar la pérdida de estos datos locales.
+        </p>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="section" id="s11">
+
+        <div class="section-head">
+            <div class="section-number">11</div>
+            <h2 class="section-title">Donaciones y pagos</h2>
+        </div>
+
+        <p>
+            Actualmente no existen donaciones ni se procesa ningún tipo de pago,
+            suscripción o transacción monetaria en ZonaCheck. La aplicación es
+            completamente gratuita en todas sus funciones de consulta y comparación
+            territorial.
+        </p>
+
+        <p>
+            ZonaCheck no solicita, no recibe, no procesa ni almacena datos bancarios,
+            números de tarjeta ni datos relativos a medios de pago. No existe
+            integración activa con Stripe ni con ninguna pasarela de pago para
+            cobros a usuarios.
+        </p>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="section" id="s12">
+
+        <div class="section-head">
+            <div class="section-number">12</div>
+            <h2 class="section-title">Datos oficiales, mapas y funcionamiento sin conexión</h2>
+        </div>
+
+        <p>
+            <strong>Diferencia entre datos estadísticos oficiales y datos personales:</strong>
+            Todos los indicadores mostrados por ZonaCheck (criminalidad del
+            Balance del Ministerio del Interior, padrón del INE, vivienda del
+            MIVAU/SERPAVI y sanidad del Ministerio de Sanidad) proceden
+            exclusivamente de fuentes estadísticas oficiales del Estado español.
+        </p>
+
+        <p>
+            Se trata de información pública de ámbito territorial agregado,
+            enteramente distinta e independiente de los datos personales de las
+            personas usuarias de la aplicación. ZonaCheck jamás asocia dichas
+            estadísticas a la identidad de ningún usuario.
+        </p>
+
+        <div class="callout">
+            <strong>Cartografía 100 % local</strong>
+            <p>
+                ZonaCheck utiliza cartografía vectorial almacenada localmente en
+                la propia aplicación (assets/maps/world.geojson y polígonos
+                territoriales oficiales del IGN). La cartografía no se descarga
+                de servidores externos de teselas remotas ni rastrea la posición
+                geográfica del usuario, permitiendo un funcionamiento ágil, seguro
+                y 100 % privado.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="section" id="s13">
+
+        <div class="section-head">
+            <div class="section-number">13</div>
+            <h2 class="section-title">Proveedores y destinatarios</h2>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Proveedor</th>
+                        <th>Función</th>
+                        <th>Datos potenciales</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td><strong>Google / Firebase</strong></td>
+                        <td>Infraestructura y Analytics técnico</td>
+                        <td>
+                            Identificadores de instalación, datos técnicos y
+                            eventos agregados de interacción sin datos identificativos directos.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Google / Gmail</strong></td>
+                        <td>Correo de soporte</td>
+                        <td>
+                            Dirección de correo, contenido del mensaje y datos
+                            técnicos del servicio de correo cuando el usuario
+                            contacta voluntariamente.
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="section" id="s14">
+
+        <div class="section-head">
+            <div class="section-number">14</div>
+            <h2 class="section-title">Transferencias internacionales</h2>
+        </div>
+
+        <p>
+            Algunos proveedores tecnológicos utilizados por ZonaCheck pueden
+            estar establecidos en Estados Unidos u otros países fuera del Espacio
+            Económico Europeo. Las transferencias internacionales se realizarán
+            mediante un mecanismo válido conforme al RGPD.
+        </p>
+
+        <p>
+            <strong>Google:</strong> Google LLC declara estar certificada bajo el
+            EU-U.S. Data Privacy Framework y los marcos relacionados para los datos
+            procedentes del EEE, Reino Unido y Suiza. Cuando proceda, podrán
+            utilizarse mecanismos contractuales u otras garantías reconocidas por
+            el RGPD.
+        </p>
+
+        <p>
+            <strong>Stripe:</strong> actualmente inactivo al no disponer de
+            donaciones ni cobros en la aplicación.
+        </p>
+
+        <p>
+            Los mecanismos concretos se aplicarán conforme a la relación contractual
+            y al servicio utilizado. La existencia de una transferencia no modifica
+            los derechos que corresponden a las personas interesadas conforme al RGPD.
+        </p>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="section" id="s15">
+
+        <div class="section-head">
+            <div class="section-number">15</div>
+            <h2 class="section-title">Plazos de conservación</h2>
+        </div>
+
+        <ul>
+            <li>
+                <strong>Favoritos y preferencias locales:</strong>
+                mientras permanezcan almacenados en el dispositivo; su conservación
+                depende de la configuración del dispositivo y de la desinstalación
+                o eliminación de datos de la aplicación.
+            </li>
+
+            <li>
+                <strong>Contacto de soporte por correo:</strong>
+                máximo general de 2 años tras la resolución de la consulta, salvo
+                obligación legal o necesidad de defensa de reclamaciones.
+            </li>
+
+            <li>
+                <strong>Newsletter:</strong>
+                inaplicable en la actualidad al no existir listas de suscripción
+                ni envíos informativos periódicos.
+            </li>
+
+            <li>
+                <strong>Analytics:</strong>
+                conforme a los periodos de conservación configurados en Google
+                Analytics y a las políticas de Google para datos agregados anónimos.
+            </li>
+
+            <li>
+                <strong>Publicidad:</strong>
+                inaplicable al no contener componentes publicitarios la aplicación.
+            </li>
+
+            <li>
+                <strong>Registros técnicos y de seguridad:</strong>
+                durante el tiempo estrictamente necesario para seguridad,
+                diagnóstico y cumplimiento técnico.
+            </li>
+
+            <li>
+                <strong>Donaciones y pagos:</strong>
+                inaplicable en la actualidad al no procesarse pagos ni
+                transacciones en la aplicación.
+            </li>
+        </ul>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="section" id="s16">
+
+        <div class="section-head">
+            <div class="section-number">16</div>
+            <h2 class="section-title">Derechos de las personas interesadas</h2>
+        </div>
+
+        <p>
+            La persona interesada puede ejercer, cuando proceda, los siguientes
+            derechos: acceso, rectificación, supresión, oposición, limitación del
+            tratamiento y portabilidad, así como retirar el consentimiento cuando
+            el tratamiento se base en él.
+        </p>
+
+        <p>
+            Las solicitudes pueden enviarse a
+            <a href="mailto:litterafilo@gmail.com">litterafilo@gmail.com</a>.
+            La persona deberá aportar la información necesaria para verificar su
+            identidad cuando resulte razonablemente necesario para evitar atender
+            una solicitud de un tercero.
+        </p>
+
+        <p>
+            El responsable responderá a las solicitudes sin dilación indebida y,
+            en principio, en el plazo de un mes desde su recepción. Este plazo
+            podrá prorrogarse otros dos meses cuando sea necesario por la
+            complejidad o por el número de solicitudes, informando de la prórroga
+            y de sus motivos dentro del primer mes.
+        </p>
+
+        <p>
+            La retirada del consentimiento no afecta a la licitud del tratamiento
+            realizado antes de su retirada.
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="section" id="s17">
+
+        <div class="section-head">
+            <div class="section-number">17</div>
+            <h2 class="section-title">Derecho a reclamar ante la autoridad de control</h2>
+        </div>
+
+        <p>
+            La persona interesada puede presentar una reclamación ante la Agencia
+            Española de Protección de Datos (AEPD) si considera que el tratamiento
+            de sus datos personales infringe la normativa aplicable.
+        </p>
+
+        <p>
+            Información oficial:
+            <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">
+                https://www.aepd.es/
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="section" id="s18">
+
+        <div class="section-head">
+            <div class="section-number">18</div>
+            <h2 class="section-title">Menores de edad</h2>
+        </div>
+
+        <p>
+            ZonaCheck no está diseñada para crear cuentas de menores ni para
+            recopilar deliberadamente datos personales de menores.
+        </p>
+
+        <p>
+            Cuando un tratamiento se base en el consentimiento y la persona sea
+            menor de 14 años, el consentimiento deberá prestarlo quien ejerza la
+            patria potestad o tutela, en los términos establecidos por la
+            legislación española.
+        </p>
+
+        <p>
+            Para tratamientos que requieran consentimiento publicitario o de
+            analítica, se aplicarán además las opciones de tratamiento para
+            usuarios menores que establezcan Google y la normativa aplicable.
+            La aplicación no utilizará notificaciones para publicidad.
+        </p>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="section" id="s19">
+
+        <div class="section-head">
+            <div class="section-number">19</div>
+            <h2 class="section-title">Seguridad</h2>
+        </div>
+
+        <p>
+            Se aplicarán medidas técnicas y organizativas razonables y adecuadas
+            al riesgo para proteger los datos frente a acceso no autorizado,
+            pérdida, destrucción, alteración, divulgación indebida y otros
+            incidentes. Los proveedores utilizados por ZonaCheck aplicarán sus
+            propias medidas de seguridad conforme a sus términos y políticas.
+        </p>
+
+        <p>
+            Si se produce una violación de seguridad de los datos personales,
+            el responsable evaluará el incidente y realizará las notificaciones
+            a la autoridad de control y a las personas afectadas cuando exista
+            una obligación legal de hacerlo.
+        </p>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="section" id="s20">
+
+        <div class="section-head">
+            <div class="section-number">20</div>
+            <h2 class="section-title">Ausencia de cookies web</h2>
+        </div>
+
+        <p>
+            ZonaCheck es una aplicación móvil nativa para Android y no utiliza
+            cookies ni tecnologías de seguimiento de páginas web.
+        </p>
+
+        <p>
+            El almacenamiento técnico se circunscribe a las preferencias locales
+            guardadas en el dispositivo y a la telemetría técnica agregada
+            descrita en esta política.
+        </p>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="section" id="s21">
+
+        <div class="section-head">
+            <div class="section-number">21</div>
+            <h2 class="section-title">Cambios en la política</h2>
+        </div>
+
+        <p>
+            Esta política podrá actualizarse cuando cambien las funciones de
+            ZonaCheck, los proveedores, las finalidades, las bases jurídicas,
+            los tratamientos o la normativa aplicable.
+        </p>
+
+        <p>
+            Cuando un cambio sea relevante para los derechos o expectativas de
+            las personas usuarias, se comunicará mediante un mecanismo adecuado.
+        </p>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="section" id="s22">
+
+        <div class="section-head">
+            <div class="section-number">22</div>
+            <h2 class="section-title">Fuentes oficiales y documentación de terceros</h2>
+        </div>
+
+        <div class="sources">
+
+            <a class="source"
+               href="https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Reglamento General de Protección de Datos (RGPD)</span>
+                <span class="source-url">eur-lex.europa.eu</span>
+            </a>
+
+            <a class="source"
+               href="https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">LOPDGDD — BOE</span>
+                <span class="source-url">boe.es</span>
+            </a>
+
+            <a class="source"
+               href="https://www.aepd.es/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Agencia Española de Protección de Datos</span>
+                <span class="source-url">aepd.es</span>
+            </a>
+
+            <a class="source"
+               href="https://firebase.google.com/support/privacy/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Firebase — Privacy and Security</span>
+                <span class="source-url">firebase.google.com</span>
+            </a>
+
+            <a class="source"
+               href="https://support.google.com/analytics/answer/11582702"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Google Analytics — Data safety / Google Play</span>
+                <span class="source-url">support.google.com</span>
+            </a>
+
+            <a class="source"
+               href="https://support.google.com/analytics/answer/12017362"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Google Analytics — privacidad UE/EEE</span>
+                <span class="source-url">support.google.com</span>
+            </a>
+
+            <a class="source"
+               href="https://policies.google.com/privacy/frameworks"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Google — marcos de transferencias internacionales</span>
+                <span class="source-url">policies.google.com</span>
+            </a>
+
+            <a class="source"
+               href="https://www.interior.gob.es/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Ministerio del Interior — Balance de Criminalidad</span>
+                <span class="source-url">interior.gob.es</span>
+            </a>
+
+            <a class="source"
+               href="https://www.ine.es/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Instituto Nacional de Estadística (INE)</span>
+                <span class="source-url">ine.es</span>
+            </a>
+
+            <a class="source"
+               href="https://www.mivau.gob.es/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="source-title">Ministerio de Vivienda y Agenda Urbana (MIVAU / SERPAVI)</span>
+                <span class="source-url">mivau.gob.es</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANNEX -->
+
+    <section class="section annex" id="annex-a">
+
+        <div class="section-head">
+            <div class="section-number">A</div>
+            <h2 class="section-title">
+                Anexo A · Coherencia con Google Play: Seguridad de los datos
+            </h2>
+        </div>
+
+        <p>
+            Este anexo no sustituye el formulario oficial de Google Play. Su
+            finalidad es dejar documentada la correspondencia entre esta política
+            y los productos actualmente seleccionados para ZonaCheck.
+        </p>
+
+        <p>
+            Google indica que el desarrollador es responsable de completar el
+            formulario de Seguridad de los datos según la recopilación y el
+            intercambio reales de su aplicación.
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Área</th>
+                        <th>Tratamiento relevante</th>
+                        <th>Observación</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td><strong>Analítica</strong></td>
+                        <td>Firebase Analytics</td>
+                        <td>
+                            Eventos de uso anónimos agregados, sesiones,
+                            identificadores técnicos de instalación.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Publicidad</strong></td>
+                        <td>Inexistente</td>
+                        <td>
+                            La aplicación no contiene publicidad ni componentes
+                            publicitarios en el binario.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Correo</strong></td>
+                        <td>Soporte voluntario</td>
+                        <td>
+                            Dirección de correo electrónico cuando la persona
+                            contacta voluntariamente.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Pagos</strong></td>
+                        <td>Inexistentes</td>
+                        <td>
+                            La aplicación no procesa pagos, suscripciones
+                            ni donaciones.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Notificaciones</strong></td>
+                        <td>Inexistentes</td>
+                        <td>
+                            No se envían notificaciones push ni se recopilan
+                            tokens de notificación.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Seguridad</strong></td>
+                        <td>Cifrado en tránsito</td>
+                        <td>
+                            Los datos técnicos transmitidos a servicios de
+                            Google viajan mediante conexiones HTTPS/TLS cifradas.
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="important">
+            <strong>Importante:</strong>
+            Las categorías finales de Google Play deben comprobarse contra la
+            implementación de producción, incluyendo los SDK, permisos, eventos
+            personalizados, Analytics y cualquier proveedor que se incorpore
+            posteriormente.
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <strong>ZonaCheck</strong> · Política de Privacidad · Versión 3.0 · Octubre 2026
+</footer>
+
 </body>
 </html>
